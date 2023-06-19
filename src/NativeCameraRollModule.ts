@@ -3,11 +3,12 @@
 // and we want to stay compatible with those
 import {TurboModuleRegistry, TurboModule} from 'react-native';
 
-import type {SubTypes} from './CameraRoll';
+import type { AlbumType, SubTypes } from './CameraRoll';
 
 type Album = {
   title: string;
   count: number;
+  type: AlbumType;
 };
 
 type PhotoIdentifier = {

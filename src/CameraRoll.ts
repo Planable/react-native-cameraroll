@@ -30,7 +30,8 @@ export type GroupTypes =
   | 'Faces'
   | 'Library'
   | 'PhotoStream'
-  | 'SavedPhotos';
+  | 'SavedPhotos'
+  | 'SmartAlbum';
 
 export type SubTypes =
   | 'PhotoPanorama'
@@ -52,6 +53,8 @@ export type Include =
   | 'orientation';
 
 export type AssetType = 'All' | 'Videos' | 'Photos';
+
+export type AlbumType = 'All' | 'Album' | 'SmartAlbum';
 
 /**
  * Shape of the param arg for the `getPhotos` function.
@@ -156,11 +159,13 @@ export type SaveToCameraRollOptions = {
 
 export type GetAlbumsParams = {
   assetType?: AssetType;
+  albumType?: AlbumType;
 };
 
 export type Album = {
   title: string;
   count: number;
+  type: AlbumType;
 };
 
 /**
